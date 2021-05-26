@@ -1,0 +1,20 @@
+@use "../partials/variables" as *;
+
+// Breakpoints
+@mixin tablet {
+    @media (min-width: $tablet-bp) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-bp) {
+        @content;
+    }
+}
+
+@mixin xl-desktop {
+    @media  (min-width: $xl-desktop-bp) {
+        @content;
+    }     
+}

@@ -1,0 +1,24 @@
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+.addCalendar__button {
+    margin: 5% 0% 0%;
+    width: 150px;
+    height: 40px;
+    background-color: $palette6;
+    border: none;
+    font-family: $Lato;
+    font-weight: 700;
+    width: 150px;
+    height: 40px;
+
+    @include tablet {
+        margin: 2% 0% 0%;
+    }
+
+    @include desktop {
+        position: relative;
+        top: -40px;
+    }
+}

@@ -1,0 +1,262 @@
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Styling for Burger Menu -- since an external package and import, left in non-BEM format */
+
+.bm-burger-bars {
+    background: $palette1;
+  }
+
+.bm-burger-button {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    left: -15px;
+    right: 0px;
+    top: 25px;
+  }
+
+.bm-cross {
+    background: $black;
+  }
+
+.bm-cross-button {
+    position: relative;
+    width: 0px;
+    height: 20px;
+  }
+
+.bm-menu {
+    background: rgba(44, 62, 80, 0.7);
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    overflow: hidden;
+}
+
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    top: 0;
+  }
+
+
+/* Styling for Mobile Header (and Tablet) */
+
+.header-mobile {
+    display: flex;
+    width: 100%;
+    padding: 0rem 1rem 0rem;
+    justify-content: space-between;
+    background-color: $palette11;
+
+    @include desktop {
+      display: none;
+    }
+
+    &__logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    &__list {
+      width: 10%;
+    }
+
+    &__list-item {
+        color: $palette1;
+        margin: 0%;
+    }
+}
+
+/* Styling for Desktop Header */ 
+
+.header-desktop {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    width: 100%;
+    padding: 0rem 0rem 0rem 2rem;
+    justify-content: space-between;
+    background-color: $palette11;
+  }
+  
+  
+  &__logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__container {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 30%;
+
+    @include xl-desktop {
+      width: 25%;
+    }
+  }
+
+  &__list {
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    width: 40%;
+
+    @include desktop {
+      padding: 1rem;
+    }
+
+    @include xl-desktop {
+      padding: 2rem;
+    }
+  }
+
+  &__list-item {
+    color: $white;
+    font-family: $Lato;
+  }
+
+  &__button-container {
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    width: 45%;
+    padding: 0rem 1rem 0rem 0rem;
+
+    @include desktop {
+      width: 60%;
+    }
+
+    @include xl-desktop {
+      width: 56%;
+    }
+  }
+
+  &__button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    font-family: $Lato;
+    font-weight: 700;
+    width: 80px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: $white;
+
+    @include desktop {
+      width: 120px;
+    }
+  }
+
+  &__button--active {
+    display: flex;
+    background-color: $palette1;
+    border: none;
+    font-family: $Lato;
+    font-weight: 700;
+    width: 150px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: $white;
+
+    @include desktop {
+      width: 120px;
+    }
+  }
+}
+
+// Styling for the Modal
+
+.header {
+  &__modal-login {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem 0rem;
+  }
+
+  &__modal-title {
+    font-family: $Lato;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem 0rem 0rem;
+    color: $palette1;
+  }
+
+  &__modal-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__modal-button {
+    background-color: $palette6;
+    border: none;
+    font-family: $Lato;
+    font-weight: 700;
+    width: 150px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 8% 0% 0%;
+    align-self: center;
+  }
+
+  &__modal-text {
+    margin: 3% 0% 2%;
+    font-family: $Lato;
+    font-weight: 400;
+  }
+
+  &__modal-input {
+    border-radius: 0px;
+    border: 1px solid $palette9;
+    height: 40px;
+  }
+
+  &__modal-input::placeholder {
+    font-family: $Lato;
+    text-indent: 10px;
+  }
+
+  &__modal-input:focus::placeholder {
+    color: transparent;
+  }
+
+  &__modal-input:focus {
+    text-indent: 10px;
+  }
+
+  &__modal-signUp {
+    display: flex;
+    margin: 5% 0% 0%;
+    padding: 0rem 1rem 0rem;
+    justify-content: center;
+  }
+
+  &__modal-option {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 5% 0% 5%;
+  }
+
+  &__modal-signUp-prompt {
+    margin: 0% 1% 0%;
+  }
+}
+

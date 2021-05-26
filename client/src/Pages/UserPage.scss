@@ -1,0 +1,43 @@
+@use "../Styles/partials/fonts" as *;
+@use "../Styles/partials/mixins" as *;
+@use "../Styles/partials/variables" as *;
+
+.userPage {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    @include desktop {
+        padding: 0rem 2rem 0rem;
+    }
+
+    &__nav-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1rem 0rem 0rem;
+
+        @include tablet {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding: 5rem 2rem 0rem;
+        }
+
+        @include desktop {
+            padding: 7rem 2rem 0rem;
+        }
+    }
+
+    &__nav-button {
+        width: 150px;
+        height: 40px;
+        border: none;
+        background-color: transparent;
+        font-family: $Lato;
+        font-weight: 700;
+        color: $palette5;
+    }
+}

@@ -1,0 +1,122 @@
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+.hero {
+    height: 330px;
+
+    @include tablet {
+        height: 550px;
+    }
+    
+    @include desktop {
+        height: 750px;
+    }
+
+    @include xl-desktop {
+        height: 950px;
+    }
+    
+
+    &__video {
+        width: 100%;
+        object-fit: fill;
+        height: 300px;
+        opacity: 0.78;
+
+        @include tablet {
+            height: 500px;
+            opacity: 1;
+        }
+
+        @include desktop {
+            height: 700px;
+        }
+
+        @include xl-desktop {
+            height: 900px;
+        }
+    }
+
+    &__text-container {
+        position: relative;
+        top: -80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include desktop {
+            top: -200px;
+        }
+
+        @include xl-desktop {
+            top: -320px;
+        }
+
+    }
+
+    &__text {
+        position: relative;
+        top: -100px;
+
+        @include tablet {
+            top: -200px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        position: relative;
+        top: -100px;
+        background-color: $palette6;
+        border: none;
+        font-family: $Lato;
+        font-weight: 700;
+        width: 100px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            top: -180px;
+            width: 250px;
+            height: 50px;
+        }
+    }
+
+    &__button--2 {
+        display: flex;
+        position: relative;
+        top: -100px;
+        background-color: $palette6;
+        border: none;
+        font-family: $Lato;
+        font-weight: 700;
+        width: 120px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            top: -180px;
+            width: 250px;
+            height: 50px;
+        }
+    }
+
+    &__description {
+        color: $palette6;
+        font-family: $Lato;
+        font-weight: 700;
+        font-size: 1.8rem;
+
+        @include tablet {
+            font-size: 3rem;
+        }
+
+        @include desktop {
+            font-size: 4rem;
+        }
+    }
+}

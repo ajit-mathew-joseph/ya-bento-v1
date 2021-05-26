@@ -1,0 +1,177 @@
+@use "../Styles/partials/fonts" as *;
+@use "../Styles/partials/mixins" as *;
+@use "../Styles/partials/variables" as *;
+
+.about {
+    width: 100%;
+    &__hero {
+        background-image: url("../Assets/Images/Journey.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            height: 500px;
+        }
+
+        @include desktop {
+            height: 700px;
+        }
+    }
+
+    &__hero-title {
+        font-family: $Lato;
+        font-weight: 700;
+        color: $white;
+        font-size: 2rem;
+
+        @include tablet {
+            font-size: 3rem;
+        }
+        
+        @include desktop {
+            font-size: 5rem;
+        }
+    }
+
+    &__history-section {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__history-title {
+        text-align: center;
+        font-family: $Lato;
+        font-weight: 700;
+        margin: 5% 0% 5%;
+
+        @include tablet {
+            margin: 5% 0% 3%;
+        }
+
+        @include tablet {
+            margin: 2% 0% 2%;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__history-image {
+        width: 100%;
+        margin: 0% 0% 10%;
+
+        @include tablet {
+            width: 700px;
+            height: 500px;
+            margin: 0% 0% 5%;
+        }
+
+        @include desktop {
+            width: 900px;
+            height: 600px;
+            margin: 0% 0% 3%;
+        }
+
+        @include xl-desktop {
+            margin: 0% 0% 2%;
+        }
+    }
+
+    &__history-content {
+        padding: 0rem 1rem 0rem;
+
+        @include tablet {
+            width: 700px;
+            padding: 0rem;
+        }
+
+        @include desktop {
+            width: 900px;
+        }
+    }
+
+    &__values-section {
+        padding: 0rem 0rem 2rem;
+    }
+
+    &__values-sub-container {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__values-title {
+        text-align: center;
+        margin: 0% 0% 5%;
+        font-family: $Lato;
+        font-weight: 700;
+
+        @include tablet {
+            margin: 0% 0% 3%;
+        }
+
+        @include desktop {
+            margin: 0% 0% 2%;
+            font-size: 2.5rem;
+        }
+
+        @include xl-desktop {
+            margin: 0% 0% 1%;
+        }
+    }
+
+    &__values-image {
+        width: 100%;
+        padding: 0rem 1rem 1rem;
+
+        @include tablet {
+            width: 700px;
+            height: 500px;
+            margin: 0% 0% 3%;
+            padding: 0rem;
+        }
+
+        @include desktop {
+            width: 900px;
+            height: 600px;
+            margin: 0% 0% 2%;
+        }
+
+        @include xl-desktop {
+            margin: 0% 0% 1%;
+        }
+    }
+
+    &__values-subTitle {
+        font-family: $Lato;
+        font-weight: 700;
+        text-align: center;
+        color: $palette1;
+        font-size: 1.35rem;
+
+        @include desktop {
+            font-size: 1.8rem;
+            margin: 0% 0% 2%;
+        }
+    }
+
+    &__values-content {
+        padding: 0rem 1rem 0rem;
+
+        @include tablet {
+            width: 700px;
+            padding: 0rem;
+        }
+
+        @include desktop {
+            width: 900px;
+        }
+    }
+}

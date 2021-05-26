@@ -1,0 +1,86 @@
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 0rem 3rem;
+    
+    @include tablet {
+        padding: 1rem 0rem 3rem;
+        width: 80%;
+    }
+
+    @include desktop {
+        flex-direction: column;
+    }
+
+    @include xl-desktop {
+        height: 700px;
+    }
+
+    &__title {
+        text-align: center;
+        padding: 0rem 0rem 1rem;
+        margin: 0;
+
+        @include tablet {
+            padding: 0rem;
+        };
+    }
+
+    &__main {
+        @include desktop {
+            display: flex;
+            width: 100%;
+        }
+        
+    }
+
+    &__sub-section {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            width: 50%;
+            padding: 0rem 1rem 0rem;
+        }
+    }
+
+    &__input-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 1rem 0rem;
+    }
+
+    &__label {
+        margin: 2% 0% 1%;
+    }
+
+    &__field {
+        text-indent: 5px;
+    }
+
+    &__save-button {
+        margin: 10% 0% 0%;
+        width: 150px;
+        height: 40px;
+        background-color: $palette6;
+        border: none;
+        font-family: $Lato;
+        font-weight: 700;
+        width: 150px;
+        height: 40px;
+
+        @include tablet {
+            margin: 5% 0% 0%;
+        }
+    }
+
+    &__button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

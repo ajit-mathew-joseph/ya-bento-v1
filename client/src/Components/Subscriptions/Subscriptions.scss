@@ -1,0 +1,149 @@
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+.subscriptions {
+    background-color: $palette8;
+    font-family: $Lato;
+
+
+    &__main-title {
+        padding: 3rem 0rem 1.5rem;
+        text-align: center;
+        font-weight: 700;
+
+        @include desktop {
+            padding: 3rem 0rem 5rem;
+            font-size: 2.5rem;
+        }
+
+        @include xl-desktop {
+            font-size: 3rem;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+            flex-direction: row-reverse;
+            justify-content: space-around;
+        }
+
+        @include xl-desktop {
+            justify-content: space-evenly;
+        }
+    }
+
+    &__card {
+        background-color: $white;
+        width: 240px;
+        height: 320px;
+        border-radius: 10px; 
+        box-shadow: 0 5px 9px -1px rgba(0,0,0,0.25); 
+        margin: 0% 0% 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet {
+            width: 300px;
+            height: 400px;
+            margin: 0% 0% 10%;
+        }
+
+        @include desktop {
+            width: 300px;
+            height: 400px;
+            margin: 0% 0% 5%;
+        }
+    }
+
+    &__card-title {
+        color: $palette2;
+        font-weight: 700;
+        text-align: center;
+        width: 200px;
+        font-size: 1.5rem;
+
+        @include tablet {
+            font-size: 2.2rem;
+            width: 300px;
+        }
+    }
+
+    &__card-price {
+        color: $palette1;
+        text-align: center;
+        width: 200px;
+        font-weight: 700;
+        font-size: 1.5rem;
+
+        @include tablet {
+            font-size: 1.8rem;
+            width: 300px;
+        }
+    }
+
+    &__card-quantity {
+        color: $palette1;
+        text-align: center;
+        width: 200px;
+        font-weight: 700;
+
+        @include tablet {
+            font-size: 1.2rem;
+            width: 300px;
+        }
+    }
+
+    &__card-frequency {
+        color: $palette3;
+        text-align: center;
+        width: 200px;
+        font-weight: 700;
+
+        @include tablet {
+            font-size: 1rem;
+            width: 300px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        background-color: $palette1;
+        border: none;
+        font-family: $Lato;
+        font-weight: 700;
+        width: 150px;
+        height: 35px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        color: $white;
+        margin: 0% 14% 0%;
+
+        @include tablet {
+            font-size: 1.2rem;
+            width: 200px;
+            height: 40px;
+            margin: 0% 17% 0%;
+        }
+    }
+
+    &__info-text {
+        text-align: center;
+        padding: 0rem 0rem 3rem;
+        font-weight: 400;
+        font-style: italic;
+        color: $black;
+        margin: 0%;
+
+        @include desktop {
+            font-size: 1.2rem;
+        }
+    }
+}

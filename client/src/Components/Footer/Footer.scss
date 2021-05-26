@@ -1,0 +1,45 @@
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+
+.footer {
+    background-color: $palette11;
+    padding: 2rem 0rem 0rem;
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__icon--link {
+        margin: 0% 3% 0%;
+
+        @include tablet {
+            margin: 0% 2% 0%;
+        }
+
+        @include desktop {
+            margin: 0% 1% 0%;
+        }
+    }
+
+    &__list {
+        margin: 0%;
+        padding: 1rem 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__list-item {
+        font-family: $Lato;
+        font-weight: 700;
+        color: $palette9;
+        margin: 2% 0% 3%;
+    }
+}

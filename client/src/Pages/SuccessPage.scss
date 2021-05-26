@@ -1,0 +1,58 @@
+@use "../Styles/partials/fonts" as *;
+@use "../Styles/partials/mixins" as *;
+@use "../Styles/partials/variables" as *;
+
+.success {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+        height: 500px;
+    }
+
+    @include desktop {
+        height: 700px;
+    }
+
+    &__container {
+        background-color: $palette8;
+        width: 80%;
+        height: 200px;
+        border-radius: 5px;
+        border: 1px solid $black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include tablet {
+            height: 300px;
+        }
+
+        @include desktop {
+            width: 50%;
+            height: 400px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        color: $black;
+    }
+
+    &__button {
+        width: 150px;
+        align-self: center;
+        margin: 5% 0% 0%;
+        font-family: $Lato;
+        font-weight: 700;
+        height: 40px;
+        border: none;
+        background-color: $palette6;
+
+        @include tablet {
+            width: 200px;
+        }
+    }
+}

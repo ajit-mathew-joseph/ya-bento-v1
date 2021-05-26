@@ -1,0 +1,73 @@
+@use "../../Styles/partials/fonts" as *;
+@use "../../Styles/partials/mixins" as *;
+@use "../../Styles/partials/variables" as *;
+@import 'react-nice-dates/src/style.scss';
+
+
+// Styling Specific to the Calendar UI -- since the UI is an import, I have left the styling in Non-BEM format
+
+$nice-dates-color-gray-dark: #333;
+$nice-dates-color-gray: #999;
+$nice-dates-color-gray-light: #ddd;
+$nice-dates-color-accent: $nice-dates-color-gray-dark;
+$nice-dates-font-size-small: 12px;
+$nice-dates-font-size-base: 14px;
+$nice-dates-font-size-big: 16px;
+
+.nice-dates-navigation, .nice-dates-day {
+    color: red;
+  }
+  .nice-dates-popover {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    max-width: 480px;
+    transition: none;
+  }
+
+  .nice-dates-grid {
+      height: 300px;
+  }
+
+// Styling for the Outer Container of the Calendar, as well as other supporting elements
+
+.calendar-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem 0rem;
+    align-items: center;
+    height: 400px;
+
+    @include tablet {
+        height: 750px;
+    }
+
+    @include desktop {
+        height: 850px;
+    }
+
+    @include xl-desktop {
+        height: 900px;
+    }
+
+    &__title {
+        font-size: 1rem;
+        padding: 0.5rem 0rem 0rem;
+    }
+    
+    &__calendar {
+        width: 100%;
+
+        @include desktop {
+            width: 60%;
+            height: 700px;
+        } 
+
+        @include xl-desktop {
+            width: 40%;
+            height: 600px;
+        } 
+    }
+
+    
+}

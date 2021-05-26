@@ -1,0 +1,30 @@
+@use "../partials/fonts" as *;
+
+// Font
+$Lato: "Lato";
+
+// Breakpoints
+
+$tablet-bp: 768px;
+$desktop-bp: 1280px;
+$xl-desktop-bp: 1920px;
+
+// Common Colors
+
+$black: #000;
+$white: #FFF;
+
+// Palette Colors (Taken from https://flatuicolors.com/palette/defo)
+
+$palette1: rgba(26, 188, 156,1.0); // Turquoise
+$palette2: rgba(22, 160, 133,1.0); // Green Sea
+$palette3: rgba(46, 204, 113,1.0); // Emerald
+$palette4: rgba(39, 174, 96,1.0); // Nephritis
+$palette5: rgba(52, 152, 219,1.0); // Peter River
+$palette6: rgba(241, 196, 15, 1.0); // Sun Flower
+$palette7: rgba(230, 126, 34,1.0); // Carrot
+$palette8: rgba(236, 240, 241,1.0); // Clouds
+$palette9: rgba(149, 165, 166,1.0); // Concrete
+$palette10: rgba(52, 73, 94,1.0); // Wet Asphalt
+$palette11: rgba(44, 62, 80,1.0); // Midnight Blue
+$palette12: rgba(231, 76, 60,1.0); // Alizarin
