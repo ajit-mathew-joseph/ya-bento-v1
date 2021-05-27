@@ -233,6 +233,8 @@ class App extends Component {
 
     document.title = "Welcome to Ya-bento!"
 
+    console.log(process.env.REACT_APP_FIREBASE_API_KEY)
+
     return (
       <div className="App">
         <Router>
